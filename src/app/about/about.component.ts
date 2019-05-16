@@ -10,11 +10,5 @@ import { createHttpObservable } from '../common/util';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  ngOnInit() {
-    const http$ = createHttpObservable('/api/courses');
-    const courses$ = http$.pipe(map(res => Object.values(res['payload'])));
-    courses$.subscribe(courses => console.log(courses), noop, () =>
-      console.log('completed')
-    );
-  }
+  ngOnInit() {}
 }
